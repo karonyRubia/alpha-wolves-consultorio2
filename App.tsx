@@ -124,4 +124,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App.py
+export default App;
