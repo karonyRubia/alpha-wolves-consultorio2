@@ -1,5 +1,25 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: alpha wolves consultorio
+            - nome: Cache
+  utiliza: actions/cache@v5.0.2
+  com:
+    # Uma lista de arquivos, diretórios e padrões curinga para armazenar em cache e restaurar
+    caminho:
+    # Uma chave explícita para restaurar e salvar o cache
+    chave:
+    # Uma string ordenada de várias linhas listando as chaves correspondentes ao prefixo, que são usadas para restaurar o cache obsoleto caso não ocorra nenhuma ocorrência de cache para a chave. Observe que `cache-hit` retorna falso neste caso.
+    restaurar-chaves: # opcional
+    # O tamanho do bloco usado para dividir arquivos grandes durante o upload, em bytes
+    tamanho-do-pedaço-de-upload: # opcional
+    # Um valor booleano opcional que, quando ativado, permite que os executores do Windows salvem ou restaurem caches que podem ser restaurados ou salvos, respectivamente, em outras plataformas.
+    enableCrossOsArchive: # opcional, o padrão é falso
+    # Falhe o fluxo de trabalho se a entrada de cache não for encontrada
+    falha-em-cache-miss: # opcional, o padrão é falso
+    # Verifica se existe uma entrada de cache para a(s) entrada(s) fornecida(s) (chave, chaves-de-restauração) sem baixar o cache.
+    lookup-only: # opcional, o padrão é falso
+    # Execute a etapa pós-execução para salvar o cache mesmo que uma etapa anterior falhe
+    salvar-sempre: # opcional, o padrão é falso
+          
 
 on:
   # Runs on pushes targeting the default branch
